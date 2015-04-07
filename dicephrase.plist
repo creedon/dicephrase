@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>dicephrase</string>
+	<key>WorkingDirectory</key>
+	<string>/path/to/application/directory</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>$PATH:/usr/local/bin</string>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/env node</string>
+		<string>server.js</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>StandardOutPath</key>
+	<string>log.log</string>
+	<key>StandardErrorPath</key>
+	<string>error.log</string>
+</dict>
+</plist>
