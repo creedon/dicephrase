@@ -13,8 +13,8 @@
 	</dict>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/local/bin/node</string>
-		<string>server.js</string>
+		<string>npm</string>
+		<string>start</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
