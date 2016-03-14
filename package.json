@@ -1,0 +1,13 @@
+{
+    "name" : "dicephrase",
+    "version" : "0.1.0",
+    "main" : "server.js",
+    "dependencies" : {
+        "body-parser" : "",
+        "console-stamp" : "",
+        "express" : ""
+    	},
+    "scripts" : {
+        "start" : "node server"
+        }
+	}
