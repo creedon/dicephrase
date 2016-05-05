@@ -9,7 +9,7 @@
 	<key>EnvironmentVariables</key>
 	<dict>
 		<key>PATH</key>
-		<string>$PATH:/usr/local/bin</string>
+		<string>$PATH:/bin:/usr/local/bin</string>
 	</dict>
 	<key>ProgramArguments</key>
 	<array>

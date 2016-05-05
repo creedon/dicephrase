@@ -5,7 +5,7 @@ require ( 'console-stamp' ) ( console, 'dd/mm/yyyy HH:MM:ss' );
 // var bodyParser  = require ( 'body-parser' );
 var express     = require ( 'express' );
 var fs          = require ( 'fs' );
-var http        = require ( 'http' );
+var https        = require ( 'https' );
 
 var config      = require ( './config' );
 
@@ -90,17 +90,17 @@ router.route ( '/dicephrase/:wordCount' )
         var wordCount = Math.min ( Math.max ( parseInt ( request.params.wordCount ), 1 ), 10 );
         
         var ct = 5 * wordCount;
-        var httpCallback = function ( httpResponse ) {
-
+        var httpCallback = function ( res ) {
+        
             var s = '';
             
-            httpResponse.on ( 'data', function ( chunk ) {
+            res.on ( 'data', function ( chunk ) {
             
                 s += chunk;
                 
                 } );
 
-            httpResponse.on ( 'end', function ( ) {
+            res.on ( 'end', function ( ) {
             
                 var a = JSON.parse ( s ) [ 'result' ] [ 'random' ] [ 'data' ];
                 var key;
@@ -122,7 +122,7 @@ router.route ( '/dicephrase/:wordCount' )
                 } );
             };
             
-        var apiReq = http.request ( httpOptions, httpCallback );
+        var apiReq = https.request ( httpOptions, httpCallback );
         
         apiReq.write ( JSON.stringify ( {
         
