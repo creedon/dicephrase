@@ -4,7 +4,11 @@
 <dict>
 	<key>Label</key>
 	<string>dicephrase</string>
-	<key>WorkingDirectory</key>
+		<key>UserName</key>
+	<string>node</string>
+	<key>GroupName</key>
+	<string>node</string>
+    <key>WorkingDirectory</key>
 	<string>/path/to/application/directory</string>
 	<key>EnvironmentVariables</key>
 	<dict>

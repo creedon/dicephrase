@@ -5,12 +5,12 @@ require ( 'console-stamp' ) ( console, 'dd/mm/yyyy HH:MM:ss' );
 // var bodyParser  = require ( 'body-parser' );
 var express     = require ( 'express' );
 var fs          = require ( 'fs' );
-var https        = require ( 'https' );
+var https       = require ( 'https' );
 
 var config      = require ( './config' );
 
 var app = express ( );
-var host = config.host || process.env.HOST || '127.0.0.1';
+var host = config.host || process.env.HOST || '';
 var httpOptions = {
 
     headers : {
@@ -23,7 +23,7 @@ var httpOptions = {
     path : '/json-rpc/1/invoke'
     
     };
-var port = config.port || process.env.PORT || 8080;
+var port = config.port || process.env.PORT || '/var/tmp/node/dicephrase.sock';
 var wordList = { };
 
 
